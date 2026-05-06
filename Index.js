@@ -15,7 +15,7 @@ let sitios = [
         vientoIdeal: "Poniente",
         puntuacion: 9.8,
         esGratis: true,
-        descripcion: "Famosa por su popular duna, agua cristalina y el ambiente de kite.",
+        descripcion: "Famosa por su popular duna, agua cristalina y el ambiente de kite. pertenece al oceano atlantico.",
         zona: "Costa",
         aforo: 3000
     },
@@ -35,10 +35,33 @@ let sitios = [
         id: 3,
         nombre: "Hurricane",
         tipo: "Restaurante",
-        puntuacion: 9.5,
+        puntuacion: 7.7,
         esGratis: false,
         descripcion: "Restaurante/Chiringuito exoticamente gastronomico",
         zona: "A las afueras",
         aforo: 145
     },
+
+    {
+        id: 4,
+        nombre: "Playa Chica",
+        tipo: "Playa",
+        vientoIdeal: "Levante",
+        puntuacion: 9,
+        esGratis: true,
+        descripcion: "Famosa por su agua muy fria y cristalina. Pertenece al mar mediterraneo",
+        zona: "Costa",
+        aforo: 145
+    },
+
+    {
+        id: 5,
+        nombre: "Puerta de Jerez",
+        tipo: "Punto de interes",
+        puntuacion: 8.5,
+        esGratis: true,
+        descripcion: "Monumento/pasadizo conocido historico por el cual se entra al centro de la ciudad",
+        zona: "Centro",
+        aforo: 25
+    }
 ];
