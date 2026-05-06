@@ -18,5 +18,27 @@ let sitios = [
         descripcion: "Famosa por su popular duna, agua cristalina y el ambiente de kite.",
         zona: "Costa",
         aforo: 3000
-    }
+    },
+
+    {
+        id: 2,
+        nombre: "Castillo de Guzman el Bueno",
+        tipo: "Sitio de interes",
+        puntuacion: 8,
+        esGratis: false,
+        descripcion: "Fortaleza/castillo histórico, frente al puerto",
+        zona: "Centro",
+        aforo: 170
+    },
+
+    {
+        id: 3,
+        nombre: "Hurricane",
+        tipo: "Restaurante",
+        puntuacion: 9.5,
+        esGratis: false,
+        descripcion: "Restaurante/Chiringuito exoticamente gastronomico",
+        zona: "A las afueras",
+        aforo: 145
+    },
 ];
