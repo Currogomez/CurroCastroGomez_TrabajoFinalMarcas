@@ -7,7 +7,8 @@ Este proyecto trata sobre elaborar una **API REST** hecha con sobre todo **Node.
 
 ---
 
-## 🏝️🏰 Temática: Como ya he dicho antes, sera sobre el turismo en Tarifa, abordando desde sus sitios mas miticos, hasta sus actividades.
+## 🏝️🏰 Temática: Turismo En la ciudad de Tarifa
+Como ya he dicho antes, abordando desde sus sitios mas miticos, hasta sus actividades.
 
 La API gestiona dos recursos relacionados:
 
