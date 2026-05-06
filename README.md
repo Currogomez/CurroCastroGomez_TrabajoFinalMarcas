@@ -16,3 +16,20 @@ La API gestiona dos recursos relacionados:
 2.  **El secundario (Actividades):** Son basicamente las experiencias/lo que se puede hacer en cada sitio, por ejemplo, si se trata de una playa se podra hacer Kitesurf, visitar la playa, tomar el sol, etc. esto se hara mediante el campo ID (en este caso del sitio) ya que es el principal.
 
 ---
+
+## 🔢 Estructura de Datos (Atributos planteados para el recurso principal)
+
+he puesto unos 10 atributos, que son los que considero mas importantes.
+Cada **Sitio Turístico** contendra:
+
+*   `id`: Un Identificador (único).
+*   `nombre`: El nombre del sitio.
+*   `tipo`: Categoría (Playa, Monumento, Restaurante, etc).
+*   `vientoIdeal`: Para el caso de las playas (Levante o Poniente).
+*   `puntuacion`: Valoración del 1 al 10.
+*   `esGratis`: Booleano (true/false).
+*   `descripcion`: Breve explicación del sitio.
+*   `zona`: Ubicación (Pueblo, A las afueras, Costa, etc).
+*   `aforo`: Aforo Maximo del sitio.
+
+---
