@@ -23,7 +23,7 @@ let sitios = [
     {
         id: 2,
         nombre: "Castillo de Guzman el Bueno",
-        tipo: "Sitio de interes",
+        tipo: "Punto de interes",
         puntuacion: 8,
         esGratis: false,
         descripcion: "Fortaleza/castillo histórico, frente al puerto",
