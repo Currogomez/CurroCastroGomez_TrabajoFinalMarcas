@@ -11,6 +11,7 @@ enum DificultadAcceso {
     Alta = "Alta"
 }
 
+//-----------------------------------------
 
 // --- INTERFAZ DEL RECURSO PRINCIPAL ---
 interface SitioTuristico {
