@@ -71,17 +71,36 @@ let sitios = [
     }
 ];
 
+//-----------------------------------------
+
 // --- ENDPOINTS ---
 
 // Para coger/obtener los sitios turisticos. Da la lista o sea todoo el array de los sitios turisticos
 app.get("/sitios", (req, res) => {
-    res.status(200).json(sitios); // 200 significa ok, o sea que es correcto.
+    res.status(200).json(sitios); // 200 (significa ok), o sea que es correcto.
 });
+
+//-------------------
 
 // Obtener un registro, O sea, busca un elemento de la lista anterior a partir del ID
 app.get("/sitio/:id", (req, res) => {
     const sitio = sitios.find(s => s.id === req.params.id);
 
-    if (!sitio) return res.status(404).json({ error: "Sitio no encontrado" }); // error tipico 404
+    if (!sitio) return res.status(404).json({ error: "Sitio no encontrado ‼️" }); // (error tipico) 404
     res.status(200).json(sitio);
+});
+
+//-------------------
+
+// Hacer un nuevo registro con validación, o sea añadir un nuevo sitio de Tarifa a la lista que creamos
+app.post("/sitio", (req, res) => {
+    const { nombre, tipo, DificultadAcceso, puntuacion, zona, aforo } = req.body;
+
+    if (!nombre || !tipo || !DificultadAcceso || puntuacion === undefined) {
+        return res.status(400).json({ error: "Faltan campos obligatorios ‼️" }); // 400 (Solicitud incorrecta)
+    }
+
+    const nuevoSitio = { id: sitios.length + 1, ...req.body };
+    sitios.push(nuevoSitio);
+    res.status(201).json(nuevoSitio); // 201 (creado)
 });
