@@ -25,7 +25,8 @@ Cada **Sitio Turístico** contendra:
 *   `id`: Un Identificador (único).
 *   `nombre`: El nombre del sitio.
 *   `tipo`: Categoría (Playa, Monumento, Restaurante, etc).
-*   `vientoIdeal`: Para el caso de las playas (Levante o Poniente).
+*   `vientoIdeal`: SOLO Para el caso de las playas (Levante o Poniente).
+*   `DificultadAcceso`: La dificultad de acceso por varios factores al lugar.
 *   `puntuacion`: Valoración del 1 al 10.
 *   `esGratis`: Booleano (true/false).
 *   `descripcion`: Breve explicación del sitio.
