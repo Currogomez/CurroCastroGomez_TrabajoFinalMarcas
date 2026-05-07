@@ -77,3 +77,11 @@ let sitios = [
 app.get("/sitios", (req, res) => {
     res.status(200).json(sitios); // 200 significa ok, o sea que es correcto.
 });
+
+// Obtener un registro, O sea, busca un elemento de la lista anterior a partir del ID
+app.get("/sitio/:id", (req, res) => {
+    const sitio = sitios.find(s => s.id === req.params.id);
+
+    if (!sitio) return res.status(404).json({ error: "Sitio no encontrado" }); // error tipico 404
+    res.status(200).json(sitio);
+});
