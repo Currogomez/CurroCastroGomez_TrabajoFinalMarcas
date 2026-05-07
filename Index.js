@@ -70,3 +70,10 @@ let sitios = [
         aforo: 25
     }
 ];
+
+// --- ENDPOINTS ---
+
+// Para coger/obtener los sitios turisticos. Da la lista o sea todoo el array de los sitios turisticos
+app.get("/sitios", (req, res) => {
+    res.status(200).json(sitios); // 200 significa ok, o sea que es correcto.
+});
