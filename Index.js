@@ -104,3 +104,12 @@ app.post("/sitio", (req, res) => {
     sitios.push(nuevoSitio);
     res.status(201).json(nuevoSitio); // 201 (creado)
 });
+
+// Eliminar un registro de la lista
+app.delete("/sitio", (req, res) => {
+    const index = sitios.findIndex(s => s.id === req.body.id);
+    if (index === -1) return res.status(404).json({ error: "ID inexistente ‼️" });
+
+    const eliminado = sitios.splice(index, 1);
+    res.status(200).send(`Sitio '${eliminado[0].nombre}' eliminado 🗑️`);
+});
