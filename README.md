@@ -22,15 +22,17 @@ La API gestiona dos recursos relacionados:
 he puesto unos 10 atributos, que son los que considero mas importantes.
 Cada **Sitio Turístico** contendra:
 
-*   `id`: Un Identificador (único).
-*   `nombre`: El nombre del sitio.
-*   `tipo`: Categoría (Playa, Monumento, Restaurante, etc).
-*   `vientoIdeal`: SOLO Para el caso de las playas (Levante o Poniente).
-*   `DificultadAcceso`: La dificultad de acceso por varios factores al lugar.
-*   `puntuacion`: Valoración del 1 al 10.
-*   `esGratis`: Booleano (true/false).
-*   `descripcion`: Breve explicación del sitio.
-*   `zona`: Ubicación (Pueblo, A las afueras, Costa, etc).
-*   `aforo`: Aforo Maximo del sitio.
+*   `id`: Un Identificador (único). **`number`**
+*   `nombre`: El nombre del sitio. **`string`**
+*   `tipo`: Categoría (Playa, Monumento, Restaurante, etc). **`CategoriaSitio (enum)`**
+*   `vientoIdeal`: SOLO Para el caso de las playas (Levante o Poniente). **`string`**
+*   `DificultadAcceso`: La dificultad de acceso por varios factores al lugar (Alta, Media y Baja). **` DificultadAcceso (enum)`**
+*   `puntuacion`: Valoración del 1 al 10. **`number`**
+*   `esGratis`: Booleano (true/false). **`boolean`**
+*   `descripcion`: Breve explicación del sitio. **`string`**
+*   `zona`: Ubicación (Pueblo, A las afueras, Costa, etc). **`string`**
+*   `aforo`: Aforo Maximo del sitio. **`number`**
+
+Siendo `DificultadAcceso` y `tipo` dos enum en TipeScript para los atributos anteriores
 
 ---
