@@ -19,7 +19,7 @@ La API gestiona dos recursos relacionados:
 
 ## 🔢 Estructura de Datos (Atributos planteados para el recurso principal)
 
-he puesto unos 10 atributos, que son los que considero mas importantes.
+He puesto unos 10 atributos, que son los que considero mas importantes.
 Cada **Sitio Turístico** contendra:
 
 *   `id`: Un Identificador (único). **`number`**
@@ -36,3 +36,13 @@ Cada **Sitio Turístico** contendra:
 Siendo `DificultadAcceso` y `tipo` dos enum en TipeScript para los atributos anteriores
 
 ---
+
+## 📌 Estructura y uso de los endpoints de mi API
+
+He hecho uso de **app.get, app.post, app.delete y app.listen**, cada uno para su correspodiente funcion, a continuacion explicare brevemente que hace cada uno de estos **endpoints**:
+
+*  Primer EndPoint `app.get("/sitio/:id", (req, res)`:
+*  Segundo EndPoint `app.post("/sitio", (req, res)`:
+*  todo*...
+
+  ---
