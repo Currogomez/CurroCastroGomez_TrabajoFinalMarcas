@@ -94,7 +94,7 @@ app.get("/sitio/:id", (req, res) => {
 
 // Hacer un nuevo registro con validación, o sea añadir un nuevo sitio de Tarifa a la lista que creamos
 app.post("/sitio", (req, res) => {
-    const { nombre, tipo, DificultadAcceso, puntuacion, zona, aforo } = req.body;
+    const { nombre, tipo, DificultadAcceso, puntuacion } = req.body;
 
     if (!nombre || !tipo || !DificultadAcceso || puntuacion === undefined) {
         return res.status(400).json({ error: "Faltan campos obligatorios ‼️" }); // 400 (Solicitud incorrecta)
