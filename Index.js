@@ -124,3 +124,10 @@ app.get("/stats/total-aforo", (req, res) => {
     const total = sitios.reduce((acc, s) => acc + s.aforo, 0);
     res.status(200).json({ aforoTotalTarifa: total });
 });
+
+//-------------------
+
+//arranque
+app.listen(port, () => {
+    console.log("Server abierto en puerto " + port); // Confirma que se ha iniciado
+});
