@@ -105,11 +105,22 @@ app.post("/sitio", (req, res) => {
     res.status(201).json(nuevoSitio); // 201 (creado)
 });
 
-// Eliminar un registro de la lista
+//-------------------
+
+// Eliminar un registro de la lista (como si fuera una papelera)
 app.delete("/sitio", (req, res) => {
     const index = sitios.findIndex(s => s.id === req.body.id);
     if (index === -1) return res.status(404).json({ error: "ID inexistente ‼️" });
 
     const eliminado = sitios.splice(index, 1);
     res.status(200).send(`Sitio '${eliminado[0].nombre}' eliminado 🗑️`);
+});
+
+//-------------------
+
+// Total de aforo de toda la lista de sitios
+app.get("/stats/total-aforo", (req, res) => {
+
+    const total = sitios.reduce((acc, s) => acc + s.aforo, 0);
+    res.status(200).json({ aforoTotalTarifa: total });
 });
