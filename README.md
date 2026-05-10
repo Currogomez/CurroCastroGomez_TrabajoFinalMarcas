@@ -41,8 +41,11 @@ Siendo `DificultadAcceso` y `tipo` dos enum en TipeScript para los atributos ant
 
 He hecho uso de **app.get, app.post, app.delete y app.listen**, cada uno para su correspodiente funcion, a continuacion explicare brevemente que hace cada uno de estos **endpoints**:
 
-*  Primer EndPoint `app.get("/sitio/:id", (req, res)`:
-*  Segundo EndPoint `app.post("/sitio", (req, res)`:
-*  todo*...
+*  **Primer EndPoint** `app.get("/sitios", (req, res)`: Sirve para que el servidor de los sitios de Tarifa.
+*  **Segundo EndPoint** `app.get("/sitio/:id", (req, res)`: Busca por ID en el listado, le das el ID y te muestra ese lugar concreto.
+*  **Tercer EndPoint** `app.post("/sitio", (req, res)`: Es para que los datos de un nuevo sitio que hagamos el servidor lo guarde en la lista.
+*  **Cuarto EndPoint** `app.delete("/sitio", (req, res)`: Basicamnte es la papelera, elimina, de ahi su "app.delete", es para eliminar un sitio turistico.
+*  **Quinto EndPoint** `app.get("/stats/total-aforo", (req, res)`: Suma  la capacidad/aforo de personas que caben en todos los sitios de la lista y da el total de aforo disponible.
+*  **Sexto EndPoint** `app.listen(port, ()`: Sirve para "encender el servidor" y que "escuche" y este pendiente para poder responder a todo lo anterior.
 
   ---
