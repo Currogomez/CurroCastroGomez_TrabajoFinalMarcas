@@ -1,7 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = 5564; // He puesto el mismo puerto que en los apuntes
 
+app.use(cors());
 app.use(express.json());
 
 // --- DATOS: Sitios Turisticos (5) (Recurso Principal) ---
@@ -84,7 +86,8 @@ app.get("/sitios", (req, res) => {
 
 // Obtener un registro, O sea, busca un elemento de la lista anterior a partir del ID
 app.get("/sitio/:id", (req, res) => {
-    const sitio = sitios.find(s => s.id === req.params.id);
+    const idBuscado = Number(req.params.id);
+    const sitio = sitios.find(s => s.id === idBuscado);
 
     if (!sitio) return res.status(404).json({ error: "Sitio no encontrado ‼️" }); // (error tipico) 404
     res.status(200).json(sitio);
@@ -113,7 +116,7 @@ app.delete("/sitio", (req, res) => {
     if (index === -1) return res.status(404).json({ error: "ID inexistente ‼️" });
 
     const eliminado = sitios.splice(index, 1);
-    res.status(200).send(`Sitio '${eliminado[0].nombre}' eliminado 🗑️`);
+    res.status(200).json({ mensaje: `Sitio '${eliminado[0].nombre}' eliminado 🗑️` });
 });
 
 //-------------------
