@@ -1,23 +1,112 @@
-/* General */
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f8ff; color: #333; margin: 0; padding: 20px; }
-.contenedor-principal { max-width: 900px; margin: auto; }
-.cabecera { text-align: center; color: #0077be; border-bottom: 2px solid #0077be; margin-bottom: 20px; }
 
-/* Caja de Estadísticas */
-.caja-estadisticas { background-color: #fff9c4; border: 2px solid #fbc02d; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
-.dato-aforo { color: #d32f2f; font-size: 1.2rem; font-weight: bold; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
 
-/* Tarjetas de Sitios */
-.sitio-card { background: white; border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 5px solid #0077be; }
-.sitio-card h4 { margin: 0 0 5px 0; color: #004477; }
+.contenedor-principal {
+    max-width: 900px;
+    margin: auto;
+}
 
-/* Botones con colores */
-button { padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; color: white; font-weight: bold; }
-.boton-azul { background-color: #2196f3; }
-.boton-gris { background-color: #78909c; }
-.boton-verde { background-color: #4caf50; width: 100%; margin-top: 10px; }
-.boton-rojo { background-color: #f44336; margin-top: 10px; }
+.cabecera {
+    text-align: center;
+    color: #0077be;
+    border-bottom: 2px solid #0077be;
+    margin-bottom: 20px;
+}
 
-/* Formulario */
-.seccion-formulario { background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #ccc; margin-top: 30px; }
-input, select { display: block; width: 95%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+/* =========================================
+   2. ESTADÍSTICAS
+   ========================================= */
+.caja-estadisticas {
+    background-color: #fff9c4;
+    border: 2px solid #fbc02d;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dato-aforo {
+    color: #d32f2f;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   3. TARJETAS DE SITIOS
+   ========================================= */
+.sitio-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 5px solid #0077be;
+}
+
+.sitio-card h4 {
+    margin: 0 0 5px 0;
+    color: #004477;
+}
+
+/* =========================================
+   4. FORMULARIOS Y INPUTS
+   ========================================= */
+.seccion-formulario {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+input,
+select {
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =========================================
+   5. BOTONES
+   ========================================= */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.boton-azul {
+    background-color: #2196f3;
+}
+
+.boton-gris {
+    background-color: #78909c;
+}
+
+.boton-verde {
+    background-color: #4caf50;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.boton-rojo {
+    background-color: #f44336;
+    margin-top: 10px;
+}

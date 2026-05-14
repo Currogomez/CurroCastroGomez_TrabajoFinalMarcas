@@ -17,9 +17,11 @@
 
     <section class="seccion-busqueda">
         <h3>Buscar por ID</h3>
-        <input type="number" class="input-busqueda" placeholder="ID del sitio">
-        <button onclick="buscarUno()" class="boton-azul">Buscar</button>
-        <button onclick="cargarTodos()" class="boton-gris">Ver todos</button>
+        <label>
+            <input type="number" class="input-busqueda" placeholder="ID del sitio">
+        </label>
+        <button onclick="buscarUno()" class="boton-azul">Buscar 👀</button>
+        <button onclick="cargarTodos()" class="boton-gris">Ver todos 📋</button>
     </section>
 
     <section class="seccion-lista">
@@ -31,19 +33,29 @@
     <section class="seccion-formulario">
         <h3>Añadir Nuevo Rincón</h3>
         <form class="formulario-nuevo">
-            <input type="text" class="f-nombre" placeholder="Nombre" required>
-            <select class="f-tipo">
-                <option value="Playa">Playa</option>
-                <option value="Punto de interes">Punto de interés</option>
-                <option value="Restaurante">Restaurante</option>
-            </select>
-            <select class="f-dificultad">
-                <option value="Baja">Baja</option>
-                <option value="Media">Media</option>
-                <option value="Alta">Alta</option>
-            </select>
-            <input type="number" step="0.1" class="f-puntuacion" placeholder="Puntuación (1-10)" required>
-            <input type="number" class="f-aforo" placeholder="Aforo Máximo">
+            <label>
+                <input type="text" class="f-nombre" placeholder="Nombre" required>
+            </label>
+            <label>
+                <select class="f-tipo">
+                    <option value="Playa">Playa</option>
+                    <option value="Punto de interes">Punto de interés</option>
+                    <option value="Restaurante">Restaurante</option>
+                </select>
+            </label>
+            <label>
+                <select class="f-dificultad">
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </label>
+            <label>
+                <input type="number" step="0.5" class="f-puntuacion" placeholder="Puntuación (1-10)" required>
+            </label>
+            <label>
+                <input type="number" class="f-aforo" placeholder="Aforo Máximo">
+            </label>
             <button type="submit" class="boton-verde">Guardar en API</button>
         </form>
     </section>

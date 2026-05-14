@@ -67,13 +67,15 @@ async function eliminar(id) {
 // pintar la lista
 function renderizar(lista) {
     const contenedor = document.querySelector('.lista-sitios');
-    contenedor.innerHTML = "";
+    contenedor.innerHTML = ""; // Limpiamos el contenedor
+
     lista.forEach(s => {
         contenedor.innerHTML += `
             <article class="sitio-card">
                 <h4>${s.nombre} (ID: ${s.id})</h4>
                 <p><strong>Tipo:</strong> ${s.tipo} | <strong>Aforo:</strong> ${s.aforo}</p>
-                <button onclick="eliminar(${s.id})" class="boton-rojo">Eliminar 🗑️</button>
+                <p class="descripcion-sitio"><em>${s.descripcion || "Sin descripción disponible"}</em></p>
+                <button onclick="eliminar(${s.id})" class="boton-rojo">Eliminar</button>
             </article>
         `;
     });
