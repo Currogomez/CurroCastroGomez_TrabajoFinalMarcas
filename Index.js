@@ -110,6 +110,29 @@ app.post("/sitio", (req, res) => {
 
 //-------------------
 
+// Actualizar un sitio existente
+app.put("/sitio/:id", (req, res) => {
+    const idBuscado = Number(req.params.id);
+    const sitio = sitios.find(s => s.id === idBuscado);
+
+    if (!sitio) {
+        return res.status(404).json({ error: "Sitio no encontrado para actualizar ‼️" });
+    }
+
+    const { nombre, tipo, DificultadAcceso, puntuacion, aforo, descripcion } = req.body;
+
+    if (nombre !== undefined) sitio.nombre = nombre;
+    if (tipo !== undefined) sitio.tipo = tipo;
+    if (DificultadAcceso !== undefined) sitio.DificultadAcceso = DificultadAcceso;
+    if (puntuacion !== undefined) sitio.puntuacion = puntuacion;
+    if (aforo !== undefined) sitio.aforo = aforo;
+    if (descripcion !== undefined) sitio.descripcion = descripcion;
+
+    res.status(200).json({ mensaje: `Sitio '${sitio.nombre}' actualizado con éxito 🔄`, sitio });
+});
+
+//-------------------
+
 // Eliminar un registro de la lista (como si fuera una papelera)
 app.delete("/sitio", (req, res) => {
     const index = sitios.findIndex(s => s.id === req.body.id);
