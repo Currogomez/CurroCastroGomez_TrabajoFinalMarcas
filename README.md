@@ -49,3 +49,16 @@ He hecho uso de **app.get, app.post, app.delete y app.listen**, cada uno para su
 *  **Sexto EndPoint** `app.listen(port, ()`: Sirve para "encender el servidor" y que "escuche" y este pendiente para poder responder a todo lo anterior.
 
   ---
+
+## 🚀 Guía de Arranque del Sistema
+
+Para poner en marcha la aplicación de forma local:
+
+1. **Activación del Servidor (Backend)**:
+   * Abra una terminal en su editor (WebStorm en mi caso) o en el sistema que sea.
+   * Ejecute el comando: `node Index.js`.
+   * Mire que aparezca el mensaje: `"Server abierto en puerto 5564"`.
+
+2. **Ejecución de la Interfaz (Frontend)**:
+   * Abra el archivo `Index.html` en su navegador (Safari, Chrome, etc.).
+   * El navegador cargará automáticamente el archivo `frontend.js`, el cual se conectará con la API.
